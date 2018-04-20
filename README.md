@@ -1,8 +1,8 @@
 # Shellcode
 
-[Tutorial to write a simple shellcode (FR)](http://www.bases-hacking.org/afficher-shell.html)
-[Shellcodes Database](http://shell-storm.org/shellcode/)
-[Security related Youtube channel](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/videos)
+- [Tutorial to write a simple shellcode (FR)](http://www.bases-hacking.org/afficher-shell.html)
+- [Shellcodes Database](http://shell-storm.org/shellcode/)
+- [Security related Youtube channel](https://www.youtube.com/channel/UClcE-kVhqyiHCcjYwcpfj9w/videos)
 
 > In my opinion, the best way to create your own shellcode is to code in assembly. This way you can execute precisely the instructions that you want, and you can use differents tricks to avoid NULL bytes.
 
@@ -10,7 +10,7 @@
 
 ## From assembly to shellcode
 
-You have written an awesome assembly file which spawn a shell, chmod the entire file system and make the coffee in less than 42 bytes ? Good ! Now you need to get the op code.
+You have written an awesome assembly file which spawn a shell, chmod the entire file system and make the coffee in less than 42 bytes ? Good ! Now you need to get the op codes.
 
 ### ELF 32 bit architecture
 
