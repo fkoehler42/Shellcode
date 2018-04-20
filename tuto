@@ -1,2 +1,0 @@
-nasm -f elf file.asm // 32 bits
-objdump -d -M intel file.o
