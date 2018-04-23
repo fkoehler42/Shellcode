@@ -46,7 +46,6 @@ Disassembly of section .text:
   1e:	62 69 6e             	bound  ebp,QWORD PTR [ecx+0x6e]
   21:	2f                   	das    
   22:	73 68                	jae    8c <sh_str+0x6f>
-
 ```
 
 - According to the output of `objdump`, you have to get the operation codes from top (`_start` label) to bottom and concatenate them, adding '\x' in front of each one to make them understandable by the machine as hexadecimal syntax instructions.
@@ -55,10 +54,12 @@ In this example, the shellcode will begin like this : `\xeb\x16\x31\xc0...` and 
 
 ## Checking
 
-The last part is to check if your shellcode works as expected. To do so, you can use the 'code_tester.c' file attached. It will cast the shellcode provided as a function and execute it. Paste your shellcode in it, compile and run ! Do not forget to use the `-fno-stack-protector` and `-z execstack` flags in order to disable the compiler protections.
+The last step is to check if your shellcode works as expected. To do so, you can use the 'code_tester.c' file attached in this repository. It will cast the shellcode provided as a function and execute it. Paste your shellcode in it, compile and run ! Do not forget to use the `-fno-stack-protector` and `-z execstack` flags in order to disable the compiler protections.
 
 ```console
-$ gcc -fno-stack-protector -z execstack -m32 execve_sh_32bits.asm -o shellcode_tester
-$ ./shellcode_tester
-# WIP #
+$ gcc -fno-stack-protector -z execstack -m32 code_checker.c -o code_checker
+$ ./code_checker
+Lenght: 36
+# whoami
+root
 ```
