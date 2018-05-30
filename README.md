@@ -42,9 +42,9 @@ Disassembly of section .text:
   18:	e8 e5 ff ff ff       	call   2 <_shspawn>
 
 0000001d <sh_str>:
-  1d:	2f                   	das    
+  1d:	2f                   	das
   1e:	62 69 6e             	bound  ebp,QWORD PTR [ecx+0x6e]
-  21:	2f                   	das    
+  21:	2f                   	das
   22:	73 68                	jae    8c <sh_str+0x6f>
 ```
 
@@ -59,7 +59,7 @@ The last step is to check if your shellcode works as expected. To do so, you can
 ```console
 $ gcc -fno-stack-protector -z execstack -m32 code_checker.c -o code_checker
 $ ./code_checker
-Lenght: 36
+Length: 36
 # whoami
 root
 ```
